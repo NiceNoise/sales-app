@@ -1,0 +1,28 @@
+
+.list-group {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+    height: 12px; /* Altura de la barra de desplazamiento horizontal (si es necesario) */
+}
+
+/* Estilo para el track de la barra de desplazamiento (la parte en la que se mueve el thumb) */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color del track (puedes cambiarlo) */
+    border-radius: 10px;
+}
+
+/* Estilo para el thumb de la barra de desplazamiento (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+    background-color: #0d6efd; /* Color del thumb, que coincide con el color del botón de Bootstrap */
+    border-radius: 10px;
+}
+
+/* Opcional: Al pasar el mouse sobre el thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0b5ed7; /* Un color ligeramente más oscuro para cuando el usuario pasa el mouse */
+}
