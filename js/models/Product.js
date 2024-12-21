@@ -47,12 +47,12 @@ Product.prototype.renderUI = function() {
     const a = document.createElement("a");
     a.className="list-group-item list-group-item-action";
     a.href="#";
+    a.id=this.id;
     a.innerHTML="";
     a.innerHTML=`<div class="d-flex w-100 justify-content-between">
-    <h6 class="mb-1">${this.getName()}</h6>
-    <small>${this.getFormattedPrice()}</small>
-    </div>
-    <small>Stock: ${this.getStock()}</small>`
-
+                    <h6 class="mb-1">${this.getName()}</h6>
+                </div>
+                <small>Price: ${this.getFormattedPrice()}</small><br>
+                <small>Stock: ${this.getStock()}</small>`
     return a;
 };

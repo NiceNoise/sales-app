@@ -32,14 +32,13 @@ Customer.prototype.renderUI = function(){
     const a = document.createElement("a");
     a.className="list-group-item list-group-item-action";
     a.href="#";
+    a.id=this.id;
     a.innerHTML="";
     a.innerHTML=`<div class="d-flex w-100 justify-content-between">
                     <h6 class="mb-1">${this.getName()}</h6>
                 </div>
                 <small>${this.getEmail()}</small><br>
-                <small>Tel: ${this.getPhone()}</small>
-            </a>`
-    
+                <small>Tel: ${this.getPhone()}</small>`
     return a;
 }
 

@@ -8,6 +8,8 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="container mt-4">
+    <h1>Sistema de Ventas</h1>
+
     <!-- Navegación de Tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
@@ -26,37 +28,13 @@
 
     <!-- Contenido de los Tabs -->
     <div class="tab-content" id="myTabContent">
+
         <!-- Tab Productos -->
         <div class="tab-pane fade show active" id="productos" role="tabpanel">
             <div class="row mt-3">
-                <!-- Lista de Productos -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            Lista de Productos
-                        </div>
-                        <div class="card-body">
-                            <div class="list-group" id="listaProductos">
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">Producto 1</h6>
-                                        <small>$100</small>
-                                    </div>
-                                    <small>Stock: 50</small>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h6 class="mb-1">Producto 2</h6>
-                                        <small>$150</small>
-                                    </div>
-                                    <small>Stock: 30</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Formulario de Productos -->
-                <div class="col-md-8">
+                <div class="col-md-5">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Registro de Productos</h5>
@@ -67,25 +45,78 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="precio" class="form-label">Precio</label>
-                                    <input type="number" class="form-control" id="precio" step="0.01" required>
+                                    <input type="number" class="form-control" id="precio" step="0.01" min="0" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="stock" class="form-label">Stock</label>
-                                    <input type="number" class="form-control" id="stock" required>
+                                    <input type="number" class="form-control" id="stock" step="1" min="0" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Guardar Producto</button>
                             </form>
                         </div>
                     </div>
                 </div>
+
+                <!-- Lista de Productos -->
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-header">
+                            Lista de Productos
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group" id="listaProductos">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Producto 1</h6>
+                                    </div>
+                                    <small>Price: $100</small><br>
+                                    <small>Stock: 50</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Producto 2</h6>
+                                    </div>
+                                    <small>Price: $150</small><br>
+                                    <small>Stock: 30</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
             </div>
         </div>
 
         <!-- Tab Clientes -->
         <div class="tab-pane fade" id="clientes" role="tabpanel">
             <div class="row mt-3">
+                
+                <!-- Formulario de Clientes -->
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Registro de Clientes</h5>
+                            <form id="clienteForm">
+                                <div class="mb-3">
+                                    <label for="nombreCliente" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombreCliente" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar Cliente</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Lista de Clientes -->
-                <div class="col-md-4">
+                <div class="col-md-7">
                     <div class="card">
                         <div class="card-header">
                             Lista de Clientes
@@ -110,31 +141,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Formulario de Clientes -->
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Registro de Clientes</h5>
-                            <form id="clienteForm">
-                                <div class="mb-3">
-                                    <label for="nombreCliente" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="nombreCliente" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="telefono" class="form-label">Teléfono</label>
-                                    <input type="tel" class="form-control" id="telefono">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Guardar Cliente</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
+
     </div>
 
     <!-- Scripts de Bootstrap -->
